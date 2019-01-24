@@ -1,0 +1,8 @@
+FROM centos:7
+RUN yum -y update && \
+    yum -y install docker wget
+RUN mkdir /root/bin && \
+    wget -O /root/bin/duffle https://github.com/deislabs/duffle/releases/download/0.1.0-ralpha.4%2Bdramallamabuie/duffle-linux-amd64 && \
+    chmod 755 /root/bin/duffle && \
+    export PATH=$PATH:/root/bin/
+
