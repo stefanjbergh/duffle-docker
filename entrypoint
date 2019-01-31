@@ -1,0 +1,3 @@
+#!/bin/bash
+docker pull $INVOCATION_IMAGE
+duffle ${DUFFLE_COMMAND} .
